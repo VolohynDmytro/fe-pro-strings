@@ -12,8 +12,9 @@ export const replaceZAndVFromString = (string) => {
         else if (string[i] == 'v') {
             string = string.replace(i, "*")
         }
+        return string;
     }
-     return string;
+     
 
 };
 
