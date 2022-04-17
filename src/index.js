@@ -4,7 +4,20 @@
  * @param {string} string
  * @returns {string}
  */
-export const replaceZAndVFromString = (string) => {};
+export const replaceZAndVFromString = (string) => {
+    for (const i = 0; i <= string.length; i++) {
+        if (string[i] == 'z') {
+            string = string.replaceAt(i, "*");
+        }
+        else if (string[i] == 'v') {
+            string = string.replaceAt(i, "*")
+        }
+    }
+     return string;
+
+};
+
+
 
 /**
  * Функция должна принять 3 аргумента и все строки. Мы передаем строку,
@@ -16,7 +29,10 @@ export const replaceZAndVFromString = (string) => {};
  * @param {string} newWord
  * @returns {string}
  */
-export const changeWord = (string, word, newWord) => {};
+export const changeWord = (string, word, newWord) => {
+    const newStr = string.replace(word, newWord);
+    return newStr;
+};
 
 /**
  * Должна вернуть строку(1 аргумент) на обрезанную по длине(2 аргумент, число)
@@ -24,7 +40,10 @@ export const changeWord = (string, word, newWord) => {};
  * @param {number} length
  * @returns {string}
  */
-export const truncate = (string, length) => {};
+export const truncate = (string, length) => {
+    const newStr = string.substr(0,length);
+    return newStr;
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -37,7 +56,14 @@ export const truncate = (string, length) => {};
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbols = (string, symbol) => {};
+export const quantityOfSymbols = (string, symbol) => {
+    for (const i = 0; i <= string.length; i++, quantity = 0) {
+        if (string[i] == symbol) {
+            quantity++;
+        }
+    }
+        return quantity;
+    };
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -54,4 +80,16 @@ export const quantityOfSymbols = (string, symbol) => {};
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbolsWithIndexOf = (string, symbol) => {};
+export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
+    while (true){
+        const quantity = 0;
+        const SymIndx = string.indexOf(symbol);
+        if(SymIndx != -1){
+            const newStr = string.slice(SymIndx);
+            quantity++;
+        }
+        else if(SymIndx == -1) break;
+
+    }
+    return quantity
+};
