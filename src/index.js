@@ -10,7 +10,7 @@ export const replaceZAndVFromString = (string) => {
             string  = string.replaceAt(i, "*");
         }
         else if (string[i] == 'v') {
-            string = newStr1.replaceAt(i, "*")
+            string = string.replaceAt(i, "*")
         }
     }
      return string;
