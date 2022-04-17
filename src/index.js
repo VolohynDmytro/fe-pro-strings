@@ -7,14 +7,14 @@
 export const replaceZAndVFromString = (string) => {
     for (let i = 0; i <= string.length; i++) {
         if (string[i] === "z") {
-            string  = string.replace(i, "*");
+            string = string.replace(string[i], "*");
         }
         else if (string[i] === "v") {
-            string = string.replace(i, "*")
+            string = string.replace([i], "*");
         }
         return string;
     }
-     
+
 
 };
 
@@ -58,7 +58,7 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    for (const i = 0; i <= string.length; i++, quantity = 0) {
+    for (let i = 0; i <= string.length; i++, quantity = 0) {
         if (string[i] == symbol) {
             quantity++;
         }
@@ -83,7 +83,7 @@ export const quantityOfSymbols = (string, symbol) => {
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     while (true){
-        const quantity = 0;
+        let quantity = 0;
         const SymIndx = string.indexOf(symbol);
         if(SymIndx != -1){
             const newStr = string.slice(SymIndx);
