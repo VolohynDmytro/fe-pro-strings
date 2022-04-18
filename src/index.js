@@ -58,13 +58,14 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    for (let i = 0; i <= string.length; i++, quantity = 0) {
+    let quantity = 0;
+    for (let i = 0; i <= string.length; i++) {
         if (string[i] == symbol) {
-            quantity++;
+            quantity = quantity + 1;
         }
     }
-        return quantity;
-    };
+    return quantity;
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -82,14 +83,14 @@ export const quantityOfSymbols = (string, symbol) => {
  * @returns {number}
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
-    while (true){
-        let quantity = 0;
+    let quantity = 0;
+    while (true) {
         const SymIndx = string.indexOf(symbol);
-        if(SymIndx != -1){
+        if (SymIndx != -1) {
             const newStr = string.slice(SymIndx);
-            quantity++;
+            quantity = quantity + 1;
         }
-        else if(SymIndx == -1) break;
+        else if (SymIndx == -1) break;
 
     }
     return quantity
