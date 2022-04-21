@@ -58,8 +58,8 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
-    let quantity = 0;
     for (let i = 0; i <= string.length; i++) {
+        let quantity = 0;
         if (string[i] == symbol) {
             quantity = quantity + 1;
         }
@@ -76,21 +76,21 @@ export const quantityOfSymbols = (string, symbol) => {
  * while и искали символы этим методом, и сделали break когда позиций
  * больше нет. Таgк будет более оптимально, меньше проходов цикла.
  * Кстати, проверка регистронезависимая. Если у нас
- * строка 'I am ivan' и хочу найти количество символов i то будет
+ * строка 'I am ivan' иn хочу найти количество символов i то будет
  * их 2, и если I то тоже 2
  * @param {string} string
  * @param {string} symbol
  * @returns {number}
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
-    let quantity = 0;
     while (true) {
         const SymIndx = string.indexOf(symbol);
+        let quantity = 0;
         if (SymIndx != -1) {
             const newStr = string.slice(SymIndx);
             quantity = quantity + 1;
         }
-        else if (SymIndx == -1) break;
+         else if (SymIndx == -1) break;
 
     }
     return quantity
