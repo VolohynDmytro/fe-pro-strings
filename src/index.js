@@ -94,7 +94,7 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
             quantity = quantity + 1;
         }
         else if (symIndx === -1) break;
-        return quantity
-    }
 
+    }
+    return quantity;
 };
