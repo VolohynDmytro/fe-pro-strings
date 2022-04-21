@@ -86,11 +86,10 @@ export const quantityOfSymbols = (string, symbol) => {
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     let quantity = 0;
-    let symIndx = '';
+    let symIndx = 0;
     while (true) {
-        symIndx = string.indexOf(symbol);
+        symIndx = string.indexOf(symbol, symIndx);
         if (symIndx !== -1) {
-            string = string.slice(symIndx);
             quantity = quantity + 1;
         }
         else if (symIndx === -1) break;
