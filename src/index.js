@@ -83,15 +83,16 @@ export const quantityOfSymbols = (string, symbol) => {
  * @returns {number}
  */
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
+    let quantity = 0;
+    let symIndx = '';
     while (true) {
-        const SymIndx = string.indexOf(symbol);
-        let quantity = 0;
-        if (SymIndx !== -1) {
-            const newStr = string.slice(SymIndx);
+        symIndx = string.indexOf(symbol);
+        if (symIndx !== -1) {
+            const newStr = string.slice(symIndx);
             quantity = quantity + 1;
         }
-         else if (SymIndx === -1) break;
-
+        else if (symIndx === -1) break;
+        return quantity
     }
-    return quantity
+
 };
