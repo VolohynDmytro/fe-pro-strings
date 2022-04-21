@@ -90,7 +90,7 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
             const newStr = string.slice(SymIndx);
             quantity = quantity + 1;
         }
-         else if (SymIndx == -1) break;
+         else if (SymIndx === -1) break;
 
     }
     return quantity
