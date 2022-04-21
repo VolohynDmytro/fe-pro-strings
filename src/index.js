@@ -58,8 +58,9 @@ export const truncate = (string, length) => {
  * @returns {number}
  */
 export const quantityOfSymbols = (string, symbol) => {
+    let quantity = 0;
     for (let i = 0; i <= string.length; i++) {
-        let quantity = 0;
+        
         if (string[i] == symbol) {
             quantity = quantity + 1;
         }
@@ -89,7 +90,7 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     while (true) {
         symIndx = string.indexOf(symbol);
         if (symIndx !== -1) {
-            const newStr = string.slice(symIndx);
+            string = string.slice(symIndx);
             quantity = quantity + 1;
         }
         else if (symIndx === -1) break;
