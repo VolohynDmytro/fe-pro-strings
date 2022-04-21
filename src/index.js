@@ -63,8 +63,9 @@ export const quantityOfSymbols = (string, symbol) => {
         if (string[i] == symbol) {
             quantity = quantity + 1;
         }
+        return quantity;
     }
-    return quantity;
+    
 };
 
 /**
