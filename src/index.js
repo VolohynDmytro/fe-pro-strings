@@ -86,7 +86,7 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     while (true) {
         const SymIndx = string.indexOf(symbol);
         let quantity = 0;
-        if (SymIndx != -1) {
+        if (SymIndx !== -1) {
             const newStr = string.slice(SymIndx);
             quantity = quantity + 1;
         }
